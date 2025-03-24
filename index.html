@@ -36,10 +36,11 @@
 
     .video-container {
       position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
+      width: 100%;
+      max-width: 960px;
       margin: 30px auto;
-      max-width: 800px;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
     }
 
     .video-container iframe {

@@ -8,12 +8,13 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f8f8;
-      color: #111;
+      background: url('https://files.oaiusercontent.com/file-MddL5owS5YydQ7EvLRknRs?se=2025-03-24T03%3A51%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2dfd2489-c37a-4cca-84d6-f03a90bda241.webp&sig=y4rc3dNHPCKob7yax7GoqsoMV44HVdEQXoT/%2BaFa%2Bng%3D') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4f4f4;
     }
 
     nav {
-      background-color: #222;
+      background-color: rgba(0, 0, 0, 0.85);
       overflow: hidden;
     }
 
@@ -24,6 +25,7 @@
       text-align: center;
       padding: 14px 20px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     nav a:hover {
@@ -33,23 +35,26 @@
 
     .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
     h1 {
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 30px;
+      color: #fff;
     }
 
     .news-post {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-left: 5px solid #333;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-left: 5px solid #4caf50;
       padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      color: #111;
     }
 
     .news-post h2 {
@@ -58,7 +63,7 @@
 
     .news-post .meta {
       font-size: 0.9em;
-      color: #777;
+      color: #666;
       margin-bottom: 10px;
     }
 
@@ -81,7 +86,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="news.html">News & Updates</a>
@@ -91,13 +95,11 @@
   <div class="container">
     <h1>Kinsko News & Updates</h1>
 
-    <!-- Only the launch post remains -->
     <div class="news-post">
       <h2>Site Launched!</h2>
       <div class="meta">March 18, 2025 • <span class="tag">Website</span></div>
       <p>This is the official website for my YouTube channel, Kinsko! I’ll be posting news, behind-the-scenes updates, and upcoming events right here. Bookmark it and check back often!</p>
     </div>
-
   </div>
 
 </body>

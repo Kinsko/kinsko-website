@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kinsko</title>
   <style>
+    /* General Styles */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -12,45 +13,85 @@
       color: #111;
       text-align: center;
     }
-
     header {
       padding: 30px 20px 0;
     }
-
     .logo {
       max-width: 150px;
       height: auto;
     }
-
     .banner {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
     }
-
     h1 {
       margin: 20px 0 10px;
       font-size: 2em;
       font-weight: 600;
     }
-
-    .thumbnail {
-      width: 100%;
-      max-width: 960px;
-      height: auto;
-      margin: 30px auto 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      overflow: hidden;
     }
-
+    nav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav a:hover, .dropdown:hover .dropbtn {
+      background-color: #ddd;
+      color: black;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #f2f2f2;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Video Embed */
     .video-wrapper {
       position: relative;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      padding-top: 56.25%;
       height: 0;
       overflow: hidden;
       max-width: 960px;
       margin: 30px auto;
     }
-
     .video-wrapper iframe {
       position: absolute;
       top: 0;
@@ -59,7 +100,6 @@
       height: 100%;
       border: 0;
     }
-
     .channel-link {
       display: inline-block;
       margin: 30px 0;
@@ -69,7 +109,6 @@
       color: #111;
       transition: all 0.2s ease;
     }
-
     .channel-link:hover {
       background-color: #111;
       color: #fff;
@@ -79,35 +118,29 @@
 <body>
 
   <header>
-    <img 
-      src="https://yt3.googleusercontent.com/0wPbeE13C2AqieEqotuhh-4dzaRVnv8zJl0losFF4hEa-cTBC0G4WzhwcXXvDwbxrZ5ACAgGWA=s900-c-k-c0x00ffffff-no-rj" 
-      alt="Kinsko Logo" 
-      class="logo" 
-    />
-    <img 
-      src="https://yt3.googleusercontent.com/UUxs50U9yrGzsRg_HQTvkU3M9OElHk4Nsar7NzYym4gAjjQw-bWB0KREnl9cNj8cBY7vfEzV=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" 
-      alt="Kinsko Banner" 
-      class="banner" 
-    />
+    <img src="https://yt3.googleusercontent.com/0wPbeE13C2AqieEqotuhh-4dzaRVnv8zJl0losFF4hEa-cTBC0G4WzhwcXXvDwbxrZ5ACAgGWA=s900-c-k-c0x00ffffff-no-rj" alt="Kinsko Logo" class="logo">
+    <img src="https://yt3.googleusercontent.com/UUxs50U9yrGzsRg_HQTvkU3M9OElHk4Nsar7NzYym4gAjjQw-bWB0KREnl9cNj8cBY7vfEzV=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="Kinsko Banner" class="banner">
     <h1>Welcome to Kinsko</h1>
     <p>Check out my latest video below!</p>
   </header>
 
-  <!-- Full Thumbnail Preview -->
-  <img 
-    src="https://img.youtube.com/vi/clLcln4DU2M/maxresdefault.jpg" 
-    alt="Kinsko Video Thumbnail" 
-    class="thumbnail" 
-  />
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">More 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="about.html">About</a>
+        <!-- Add more links here if needed -->
+      </div>
+    </div> 
+  </nav>
 
   <!-- Embedded Video -->
   <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/clLcln4DU2M" 
-      title="Kinsko Latest Video"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+    <iframe src="https://www.youtube.com/embed/clLcln4DU2M" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <a class="channel-link" href="https://www.youtube.com/@Kinsko" target="_blank">

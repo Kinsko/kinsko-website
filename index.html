@@ -13,34 +13,33 @@
       text-align: center;
     }
 
-    /* NAVIGATION */
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* NAVIGATION BAR */
+    nav {
       background-color: #222;
-      padding: 0 20px;
     }
 
-    .nav-left, .nav-right {
+    .nav-links {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      gap: 40px;
+      padding: 14px 0;
     }
 
-    nav a {
-      display: block;
+    .nav-links a {
       color: #f2f2f2;
-      padding: 16px 0;
       text-decoration: none;
       font-size: 1rem;
+      padding: 8px 12px;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       background-color: #ddd;
       color: #000;
+      border-radius: 4px;
     }
 
-    /* HEADER & LAYOUT */
+    /* HEADER */
     header {
       padding: 30px 20px 0;
     }
@@ -100,17 +99,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav-container">
-    <div class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="news.html">News & Updates</a>
-    </div>
-    <div class="nav-right">
-      <a href="about.html">About</a>
-    </div>
-  </nav>
-
   <!-- Header Section -->
   <header>
     <img 
@@ -127,7 +115,16 @@
     <p>Check out my latest video below!</p>
   </header>
 
-  <!-- Video Section -->
+  <!-- Centered Navigation Bar -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="news.html">News & Updates</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- Video Embed -->
   <div class="video-wrapper">
     <iframe 
       src="https://www.youtube.com/embed/clLcln4DU2M" 

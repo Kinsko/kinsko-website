@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      background-color: #fff;
       color: #111;
       text-align: center;
     }
@@ -34,22 +34,23 @@
       font-weight: 600;
     }
 
-    .video-container {
+    /* Fixed 16:9 Video Embed Without Cropping */
+    .video-wrapper {
       position: relative;
-      width: 100%;
-      max-width: 960px;
-      margin: 30px auto;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
       overflow: hidden;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
+      max-width: 100%;
+      margin: 30px auto;
     }
 
-    .video-container iframe {
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      border: none;
+      border: 0;
     }
 
     .channel-link {
@@ -85,9 +86,10 @@
     <p>Check out my latest video below!</p>
   </header>
 
-  <div class="video-container">
+  <div class="video-wrapper">
     <iframe 
       src="https://www.youtube.com/embed/clLcln4DU2M" 
+      title="Kinsko Latest Video"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kinsko</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       margin: 0;
@@ -11,129 +11,90 @@
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
-      text-align: center;
     }
-
-    header {
-      padding: 30px 20px 0;
-    }
-
-    .logo {
-      max-width: 150px;
-      height: auto;
-    }
-
-    .banner {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
-
-    h1 {
-      margin: 20px 0 10px;
-      font-size: 2em;
-      font-weight: 600;
-    }
-
     nav {
       background-color: rgba(0, 0, 0, 0.85);
     }
-
     .nav-links {
       display: flex;
       justify-content: center;
       gap: 40px;
       padding: 14px 0;
-      flex-wrap: wrap;
     }
-
     .nav-links a {
       color: #f2f2f2;
       text-decoration: none;
       font-size: 1rem;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.2s ease, color 0.2s ease;
     }
-
-    .nav-links a:hover {
-      background-color: #ddd;
-      color: #000;
-    }
-
     .video-container {
-      width: 100%;
-      max-width: 1920px;
-      height: 1080px;
       margin: 40px auto;
+      max-width: 800px;
     }
-
-    .video-container iframe {
+    iframe {
       width: 100%;
-      height: 100%;
+      height: 450px;
       border: none;
+      border-radius: 8px;
     }
-
-    .channel-link {
-      display: inline-block;
-      margin: 30px 0;
-      padding: 10px 20px;
-      text-decoration: none;
-      border: 1px solid #fff;
+    .subscribe-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #FF0000;
       color: #fff;
-      transition: all 0.2s ease;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
     }
-
-    .channel-link:hover {
-      background-color: #fff;
-      color: #000;
+    .subscribe-button:hover {
+      background-color: #cc0000;
     }
-
-    @media (max-width: 1080px) {
-      .video-container {
-        height: auto;
-        aspect-ratio: 16 / 9;
-      }
+    .subscribe-wrapper {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .subscribe-button img {
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .login-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #444;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <img 
-      src="https://yt3.googleusercontent.com/0wPbeE13C2AqieEqotuhh-4dzaRVnv8zJl0losFF4hEa-cTBC0G4WzhwcXXvDwbxrZ5ACAgGWA=s900-c-k-c0x00ffffff-no-rj" 
-      alt="Kinsko Logo" 
-      class="logo" />
-    <img 
-      src="https://yt3.googleusercontent.com/UUxs50U9yrGzsRg_HQTvkU3M9OElHk4Nsar7NzYym4gAjjQw-bWB0KREnl9cNj8cBY7vfEzV=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" 
-      alt="Kinsko Banner" 
-      class="banner" />
-    <h1>Welcome to Kinsko</h1>
-    <p>Check out my latest video below!</p>
-  </header>
-
-  <!-- Navigation Bar -->
+  <a class="login-btn" href="admin.html">Login</a>
   <nav>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="news.html">News & Updates</a>
+      <a href="discord.html">Discord</a>
       <a href="about.html">About</a>
     </div>
   </nav>
 
-  <!-- Full 1920x1080 Video -->
   <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/clLcln4DU2M"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+    <iframe src="https://www.youtube.com/embed/clLcln4DU2M" allowfullscreen></iframe>
   </div>
 
-  <!-- Channel Link -->
-  <a class="channel-link" href="https://www.youtube.com/@Kinsko" target="_blank">
-    Visit My YouTube Channel
-  </a>
-
+  <div class="subscribe-wrapper">
+    <a class="subscribe-button" href="https://www.youtube.com/channel/UCVo5CH02Y2hARLwbn2rkt1w?sub_confirmation=1" target="_blank">
+      <img src="https://yt3.googleusercontent.com/0wPbeE13C2AqieEqotuhh-4dzaRVnv8zJl0losFF4hEa-cTBC0G4WzhwcXXvDwbxrZ5ACAgGWA=s900-c-k-c0x00ffffff-no-rj" alt="Kinsko Logo">
+      Subscribe on YouTube
+    </a>
+  </div>
 </body>
 </html>
